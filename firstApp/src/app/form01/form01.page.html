@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>form01</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form #form="ngForm" (ngSubmit)="salvar(form)">
+
+
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input name="nome" [(ngModel)]="contato.nome" type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-select justify="start" label="Gênero" placeholder="Defina seu gênero" name="genero" [(ngModel)]="contato.genero" interface="action-sheet" required>
+        <ion-select-option value="masculino">Masculino</ion-select-option>
+        <ion-select-option value="faminino">Feminino</ion-select-option>
+        <ion-select-option value="helicoptero_de_combate">Helicoptero de Combate</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Telefone</ion-label>
+      <ion-input name="telefone" [(ngModel)]="contato.telefone" type="tel" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Matricula</ion-label>
+      <ion-textarea name="mensagem" [(ngModel)]="contato.matricula" required></ion-textarea>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label></ion-label>
+      <ion-toggle justify="start" [(ngModel)]="contato.bilingue.linguagem" name="notificacoes" required>Fala mais de uma lingua?</ion-toggle>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-checkbox [(ngModel)]="contato.cursos"  (ionChange)="adicionarCurso('PHP')"></ion-checkbox>
+      <ion-label>PHP</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox [(ngModel)]="contato.cursos" (ionChange)="adicionarCurso('HTML')"></ion-checkbox>
+      <ion-label>HTML</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-checkbox [(ngModel)]="contato.cursos" (ionChange)="adicionarCurso('C#')"></ion-checkbox>
+      <ion-label>C#</ion-label>
+    </ion-item>
+
+
+    <ion-button type="submit" expand="block" [disabled]="!form.valid">Enviar</ion-button>
+
+  </form>
+</ion-content>
