@@ -1,7 +1,0 @@
-{
-  "name": "secundapp",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
