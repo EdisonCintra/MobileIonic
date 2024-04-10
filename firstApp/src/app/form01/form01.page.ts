@@ -2,7 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
-  selector: 'app-form01',
+  selector: 'app-listar',
   templateUrl: './form01.page.html',
   styleUrls: ['./form01.page.scss'],
 })

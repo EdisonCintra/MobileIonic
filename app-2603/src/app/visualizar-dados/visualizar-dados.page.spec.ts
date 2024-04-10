@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import { VisualizarDadosPage } from './visualizar-dados.page';
 
 describe('VisualizarDadosPage', () => {

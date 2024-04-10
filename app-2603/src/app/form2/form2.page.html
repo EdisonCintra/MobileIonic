@@ -1,7 +1,10 @@
-<ion-header [translucent]="true">
+<ion-header>
 
   <ion-toolbar>
-    <ion-title>form2</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Formulário 2</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -23,3 +26,4 @@
   <ion-button type="submit" expand="block" [disabled]="!form.valid">Salvar</ion-button>
 </form>
 </ion-content>
+
